@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TouristsSpotCard = ({ touristsSpot }) => {
     const { _id,spotName, countryName,averageCost, travelTime, photo } = touristsSpot
     return (
-        <div className='w-96 h-[400px] px-8 py-6 rounded-xl shadow-lg bg-[#f9f7f1] border border-gray-300'>
+        <div className='w-96 h-[400px] px-8 py-6 rounded-xl shadow-lg bg-[#FFF] border border-[#f39017]'>
             <img className='h-[170px] w-[350px] rounded-lg' src={photo} alt="" />
             <div>
                 <h2 className="text-[#01B9B7] flex items-center mt-4 text-xl font-semibold"><FaLocationDot></FaLocationDot> {countryName}</h2>
