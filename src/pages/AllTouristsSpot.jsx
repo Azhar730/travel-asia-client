@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AllSpotCard from "../components/AllSpotCard";
+//setSpots(data.filter(item=>item.userEmail==email))
 
 const AllTouristsSpot = () => {
     const [allTouristsSpot, setAllTouristsSpot] = useState([])
@@ -7,9 +8,10 @@ const AllTouristsSpot = () => {
         fetch('http://localhost:5000/touristsSpot')
             .then(res => res.json())
             .then(data => {
-                setAllTouristsSpot(data)
+                const sortedItems = [...data].sort((a,b)=>b.averageCost - a.averageCost)
+                setAllTouristsSpot(sortedItems)
             })
-    }, [])
+    }, [allTouristsSpot])
     return (
         <div>
             <h1 className="text-4xl font-bold">All Tourists Spot : {allTouristsSpot.length}</h1>

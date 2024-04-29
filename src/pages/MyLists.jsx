@@ -7,7 +7,6 @@ import useAuth from "../components/useAuth";
 const MyLists = () => {
     const {user}= useAuth()
     const email = user.email
-    console.log(email);
     const [spots, setSpots] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/touristsSpot')
