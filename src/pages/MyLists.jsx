@@ -2,16 +2,20 @@ import { useEffect, useState } from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../components/useAuth";
 
 const MyLists = () => {
+    const {user}= useAuth()
+    const email = user.email
+    console.log(email);
     const [spots, setSpots] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/touristsSpot')
             .then(res => res.json())
             .then(data => {
-                setSpots(data)
+                setSpots(data.filter(item=>item.userEmail==email))
             })
-    }, [])
+    }, [email])
     const handleDelete = id => {
         Swal.fire({
             title: "Are you sure?",

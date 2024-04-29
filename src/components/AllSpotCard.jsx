@@ -2,7 +2,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const AllSpotCard = ({ touristsSpot }) => {
-    const { _id,spotName, countryName, averageCost, seasonality, travelTime, totalVisitors, photo } = touristsSpot
+    const { _id,spotName, countryName, averageCost, seasonality, travelTime, totalVisitors, photo,userEmail } = touristsSpot
+    console.log(userEmail);
     return (
         <div className='w-96 px-8 py-6 rounded-xl shadow-lg bg-[#FFF] border border-gray-300'>
             <img className='h-[170px] w-[350px] rounded-lg' src={photo} alt="" />

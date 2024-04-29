@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/myList',
-        element: <MyLists></MyLists>
+        element: <PrivateRoute><MyLists></MyLists></PrivateRoute>
       },
       {
         path: '/profile',

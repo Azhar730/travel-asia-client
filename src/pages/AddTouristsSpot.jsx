@@ -3,7 +3,6 @@ import useAuth from "../components/useAuth";
 
 const AddTouristsSpot = () => {
     const {user} = useAuth()
-    console.log(user);
     const handleAddTouristsSpot = e => {
         e.preventDefault()
         const form = e.target;
