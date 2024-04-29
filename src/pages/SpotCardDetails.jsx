@@ -7,7 +7,7 @@ const SpotCardDetails = () => {
     return (
         <div className="max-w-5xl mx-auto">
             <img className="rounded-lg h-[450px] mx-auto w-[800px]" src={photo} alt="" />
-            <div className="px-28 py-6">
+            <div className="px-4 md:px-28 py-6">
                 <h1 className="text-4xl font-bold text-green-900">{spotName}</h1>
                 <h2 className="text-2xl mt-2 font-semibold text-[#EF4C53]">{countryName}</h2>
                 <p className="text-lg font-semibold mt-4">{description}</p>
