@@ -9,7 +9,7 @@ const MyLists = () => {
     const email = user.email
     const [spots, setSpots] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/touristsSpot')
+        fetch('https://travel-asia-server-eight.vercel.app/touristsSpot')
             .then(res => res.json())
             .then(data => {
                 setSpots(data.filter(item=>item.userEmail==email))
@@ -26,7 +26,7 @@ const MyLists = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/touristsSpot/${id}`, {
+                fetch(`https://travel-asia-server-eight.vercel.app/touristsSpot/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -60,7 +60,6 @@ const MyLists = () => {
                             <th>Update</th>
                         </tr>
                     </thead>
-                    {/* spotName, countryName, location, averageCost, seasonality, travelTime, totalVisitors, photo, */}
                     <tbody>
                         {
                             spots.map((spot,idx) => <tr key={idx} className="text-lg font-medium">

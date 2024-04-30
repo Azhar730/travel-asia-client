@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2 className="text-5xl text-center font-bold text-[#f39a25] my-16">Explore the World's Wonders: AdventureAxis Travel Experiences Await You</h2>
+            <h2 className="text-5xl text-center font-bold text-[#f39a25] my-16">Explore the World Wonders: AdventureAxis Travel Experiences Await You</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {
                     touristsSpots.slice(0,6).map((touristsSpot, idx) => <TouristsSpotCard key={idx} touristsSpot={touristsSpot} touristsSpots={touristsSpots} setTouristsSpots={setTouristsSpots}></TouristsSpotCard>)

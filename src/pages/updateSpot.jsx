@@ -19,7 +19,7 @@ const updateSpot = () => {
         const updateSpot = { spotName, countryName, location, averageCost, seasonality, travelTime, totalVisitors, photo, description }
         console.log(updateSpot);
         form.reset()
-        fetch(`http://localhost:5000/touristsSpot/${_id}`,{
+        fetch(`https://travel-asia-server-eight.vercel.app/touristsSpot/${_id}`,{
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'

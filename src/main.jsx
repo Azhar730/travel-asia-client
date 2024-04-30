@@ -28,17 +28,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/touristsSpot'),
+        loader: ()=> fetch('https://travel-asia-server-eight.vercel.app/touristsSpot'),
       },
       {
         path: '/touristsSpot/:id',
         element: <PrivateRoute><SpotCardDetails></SpotCardDetails></PrivateRoute>,
-        loader: ({params})=>fetch(`http://localhost:5000/touristsSpot/${params.id}`)
+        loader: ({params})=>fetch(`https://travel-asia-server-eight.vercel.app/touristsSpot/${params.id}`)
       },
       {
         path: '/updateSpot/:id',
         element: <UpdateSpot></UpdateSpot>,
-        loader: ({params})=>fetch(`http://localhost:5000/touristsSpot/${params.id}`)
+        loader: ({params})=>fetch(`https://travel-asia-server-eight.vercel.app/touristsSpot/${params.id}`)
       },
       {
         path: '/allTouristsSpot',

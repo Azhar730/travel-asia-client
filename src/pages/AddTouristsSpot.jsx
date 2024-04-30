@@ -19,7 +19,7 @@ const AddTouristsSpot = () => {
         const description = form.description.value
         const spotInfo = {spotName,countryName,location,averageCost,seasonality,travelTime,totalVisitors,photo,userName,userEmail,description}
         form.reset()
-        fetch('http://localhost:5000/touristsSpot',{
+        fetch('https://travel-asia-server-eight.vercel.app/touristsSpot',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

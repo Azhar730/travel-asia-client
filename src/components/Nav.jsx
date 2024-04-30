@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "./useAuth";
 import { useEffect, useState } from "react";
-// import { FaCircleUser } from "react-icons/fa6";
 
 const Nav = () => {
     const [theme,setTheme] = useState('light')
