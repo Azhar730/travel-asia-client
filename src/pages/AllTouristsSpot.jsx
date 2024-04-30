@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import AllSpotCard from "../components/AllSpotCard";
-// setSpots(data.filter(item=>item.userEmail==email))
 
 const AllTouristsSpot = () => {
     const [allTouristsSpot, setAllTouristsSpot] = useState([])
