@@ -46,9 +46,9 @@ const AllTouristsSpot = () => {
     }, [])
     return (
         <div>
-            <div>
+            <div className="text-center">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn m-1">Click</div>
+                    <div tabIndex={0} role="button" className="btn bg-[#D2B48C] text-lg font-bold">Sort by Country</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={()=>handleSpotsFilter('all')}><a>All</a></li>
                         <li onClick={()=>handleSpotsFilter('bangladesh')}><a>Bangladesh</a></li>
@@ -60,8 +60,7 @@ const AllTouristsSpot = () => {
                     </ul>
                 </div>
             </div>
-            <h1 className="text-4xl font-bold">All Tourists Spot : {allTouristsSpot.length}</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
                 {
                     displaySpot.map((touristsSpot, idx) => <AllSpotCard key={idx} touristsSpot={touristsSpot}></AllSpotCard>)
                 }
