@@ -6,6 +6,11 @@ const AllTouristsSpot = () => {
     const [allTouristsSpot, setAllTouristsSpot] = useState([])
     const [displaySpot, setDisplaySpot] = useState([])
 
+    useEffect(()=>{
+        const sortedItems = [...displaySpot].sort((a,b)=>b.averageCost - a.averageCost);
+        setDisplaySpot(sortedItems)
+    },[])
+
     const handleSpotsFilter = filter => {
         if (filter === 'all') {
             setDisplaySpot(allTouristsSpot)
