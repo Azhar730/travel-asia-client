@@ -6,11 +6,6 @@ const AllTouristsSpot = () => {
     const [allTouristsSpot, setAllTouristsSpot] = useState([])
     const [displaySpot, setDisplaySpot] = useState([])
 
-    useEffect(()=>{
-        const sortedItems = [...displaySpot].sort((a,b)=>b.averageCost - a.averageCost);
-        setDisplaySpot(sortedItems)
-    },[])
-
     const handleSpotsFilter = filter => {
         if (filter === 'all') {
             setDisplaySpot(allTouristsSpot)
@@ -55,13 +50,13 @@ const AllTouristsSpot = () => {
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn bg-[#D2B48C] text-lg font-bold">Sort by Country</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li onClick={()=>handleSpotsFilter('all')}><a>All</a></li>
-                        <li onClick={()=>handleSpotsFilter('bangladesh')}><a>Bangladesh</a></li>
-                        <li onClick={()=>handleSpotsFilter('thailand')}><a>Thailand</a></li>
-                        <li onClick={()=>handleSpotsFilter('indonesia')}><a>Indonesia</a></li>
-                        <li onClick={()=>handleSpotsFilter('malaysia')}><a>Malaysia</a></li>
-                        <li onClick={()=>handleSpotsFilter('vietnam')}><a>Vietnam</a></li>
-                        <li onClick={()=>handleSpotsFilter('cambodia')}><a>Cambodia</a></li>
+                        <li onClick={() => handleSpotsFilter('all')}><a>All</a></li>
+                        <li onClick={() => handleSpotsFilter('bangladesh')}><a>Bangladesh</a></li>
+                        <li onClick={() => handleSpotsFilter('thailand')}><a>Thailand</a></li>
+                        <li onClick={() => handleSpotsFilter('indonesia')}><a>Indonesia</a></li>
+                        <li onClick={() => handleSpotsFilter('malaysia')}><a>Malaysia</a></li>
+                        <li onClick={() => handleSpotsFilter('vietnam')}><a>Vietnam</a></li>
+                        <li onClick={() => handleSpotsFilter('cambodia')}><a>Cambodia</a></li>
                     </ul>
                 </div>
             </div>

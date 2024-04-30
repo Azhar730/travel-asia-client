@@ -3,6 +3,9 @@ import Banner from "./components/Banner";
 import { useState } from "react";
 import TouristsSpotCard from "./components/TouristsSpotCard";
 import Country from "./components/Country";
+import TouristItem from "./components/TouristItem";
+import Services from "./components/Services";
+import Newsletter from "./components/Newsletter";
 
 const Home = () => {
     const loadedTouristsSpots = useLoaderData()
@@ -16,7 +19,10 @@ const Home = () => {
                     touristsSpots.slice(0,6).map((touristsSpot, idx) => <TouristsSpotCard key={idx} touristsSpot={touristsSpot} touristsSpots={touristsSpots} setTouristsSpots={setTouristsSpots}></TouristsSpotCard>)
                 }
             </div>
+            <Services></Services>
+            <TouristItem></TouristItem>
             <Country></Country>
+            <Newsletter></Newsletter>
         </div>
     );
 };
